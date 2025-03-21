@@ -1,3 +1,4 @@
+import { Navbar } from "@/features/navbar";
 import Provider from "@/shared/components/providers";
 import { fontVariables } from "@/shared/lib/fonts";
 import "@/shared/styles/globals.css";
@@ -16,6 +17,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${fontVariables} antialiased`}>
+				<Navbar />
 				<Provider>{children}</Provider>
 			</body>
 		</html>

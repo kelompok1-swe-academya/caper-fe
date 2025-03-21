@@ -4,9 +4,9 @@ const PROTECTED_ROUTES = ["/dashboard"];
 
 const DEV_ONLY_ROUTES = ["/design-system"];
 
-const ROUTE_REDIRECTS = {
-	"/dashboard": "/dashboard/profile",
-} as const;
+// const ROUTE_REDIRECTS = {
+// 	"/dashboard": "/dashboard/profile",
+// } as const;
 
 export async function middleware(req: NextRequest) {
 	const { pathname } = req.nextUrl;
@@ -31,11 +31,11 @@ export async function middleware(req: NextRequest) {
 	// }
 
 	// Redirect to specific page if the current route is a redirect
-	const redirectPath =
-		ROUTE_REDIRECTS[pathname as keyof typeof ROUTE_REDIRECTS];
-	if (redirectPath) {
-		return NextResponse.redirect(new URL(redirectPath, req.nextUrl));
-	}
+	// const redirectPath =
+	// 	ROUTE_REDIRECTS[pathname as keyof typeof ROUTE_REDIRECTS];
+	// if (redirectPath) {
+	// 	return NextResponse.redirect(new URL(redirectPath, req.nextUrl));
+	// }
 
 	// Redirect to profile page if user is not allowed to access the current route
 	// if (
