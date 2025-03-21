@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/shared/components/ui/button";
+import AuthForm from "@/features/auth/components/auth-form";
 import { useDialogStore } from "@/shared/stores/use-dialog-store";
 
 export default function Page() {
@@ -8,14 +8,15 @@ export default function Page() {
 
 	return (
 		<div className="h-screen flex flex-col items-center justify-center">
-			<h1>Login Page</h1>
-			<Button
-				onClick={() =>
-					openDialog({ children: <h1>Dialog</h1>, title: "Dialog" })
-				}
-			>
-				Open Dialog
-			</Button>
+			<AuthForm
+				title="Login"
+				description="Enter your email below to login your account"
+				quest="Don't have an account?"
+				isHaveAccount="Sign up"
+				isLogin={true}
+				btnDescription="Login"
+				path="register"
+			/>
 		</div>
 	);
 }
