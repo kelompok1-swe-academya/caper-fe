@@ -103,22 +103,71 @@ export default function LandingPage() {
 			</section>
 
 			{/* Discover Feeds Section */}
-			<section className="py-16 px-4 md:px-0">
-				<div className="container mx-auto grid md:grid-cols-2 gap-8 items-center">
-					<div className="space-y-6">
-						<h2 className="text-2xl md:text-3xl font-bold">
-							Discover a Variety of Feeds Available for You to Explore.
-						</h2>
-						<p className="text-gray-600">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						</p>
-						<Button
-							variant="outline"
-							className="rounded-full px-8 py-3 bg-blue-500 text-white w-full md:w-auto"
-						>
-							Explore More
-						</Button>
+			<section className="py-16">
+				<div className="container mx-auto px-4">
+					<div className="grid md:grid-cols-2 gap-8 items-center">
+						<div className="space-y-6">
+							<Card className="max-w-md">
+								<CardHeader className="flex flex-row items-center gap-4 pt-2">
+									<Avatar className="h-12 w-12">
+										<AvatarImage
+											src="/person1.svg?height=48&width=48"
+											alt="Hafizh Sallam"
+										/>
+										<AvatarFallback>HS</AvatarFallback>
+									</Avatar>
+									<div>
+										<h3 className="text-lg font-semibold">Hafizh Sallam</h3>
+									</div>
+								</CardHeader>
+								<CardContent className="pb-2">
+									<p className="text-sm text-gray-600">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+										do eiusmod tempor incididunt ut labore et dolore magna
+										aliqua. Ut enim ad minim
+									</p>
+								</CardContent>
+							</Card>
+
+							<div className="flex ml-2">
+								<Avatar className="h-12 w-12 border-2 border-white-10">
+									<AvatarImage
+										src="/person2.svg?height=48&width=48"
+										alt="User"
+									/>
+									<AvatarFallback>U1</AvatarFallback>
+								</Avatar>
+								<Avatar className="h-12 w-12 border-2 border-white-10">
+									<AvatarImage
+										src="/person3.svg?height=48&width=48"
+										alt="User"
+									/>
+									<AvatarFallback>U2</AvatarFallback>
+								</Avatar>
+								<span className="text-black text-lg font-medium px-1 py-3.5">
+									Other...
+								</span>
+							</div>
+						</div>
+
+						<div className="space-y-6">
+							<h2 className="text-3xl font-bold">
+								Discover a Variety of Feeds Available for You to Explore.
+							</h2>
+							<p className="text-gray-600">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam, quis nostrud exercitation ullamco laboris
+								nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+								in reprehenderit in voluptate velit esse
+							</p>
+							<Button
+								variant="outline"
+								className="rounded-full px-8 bg-blue-500 text-white"
+							>
+								Explore More
+							</Button>
+						</div>
 					</div>
 				</div>
 			</section>
